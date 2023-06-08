@@ -5,6 +5,8 @@ import {FaInstagram} from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
 import { AiOutlineShopping } from "react-icons/ai";
+import { Link } from "react-router-dom";
+
 const SecondNavbar = () => {
   return (
     <div>
@@ -76,7 +78,9 @@ const SecondNavbar = () => {
               <Box>
                 <FaRegUser size="22" />
               </Box>
-              <Box typography={"h6"}>LOGIN</Box>
+              <Box typography={"h6"}>
+                <Link to="/login">LOGIN</Link>
+              </Box>
             </Box>
             <Box
               sx={{
