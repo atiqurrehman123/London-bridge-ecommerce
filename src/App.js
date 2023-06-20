@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
 import Home from "./pages/Home/Home.jsx"
@@ -8,7 +9,8 @@ import Accessories from './pages/Accessories/Accessories';
 import Caps from './pages/Caps/Caps';
 import New from './pages/New/New'
 import Summer from './pages/Summer/Summer'
-
+import Footer from './components/Footer';
+// Import Swiper styles
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route exact path='/account/login' element={<Login />} />
         <Route exact path='/account/signup' element={<SignUp />} />
       </Routes>
+      <Footer/>
 
 
     </div>
