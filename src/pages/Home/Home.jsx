@@ -3,6 +3,7 @@ import ImageSlider from '../../components/ImageSlider'
 import { Box } from '@mui/material';
 import Card from '../../components/Card';
 import Grid from '@mui/material/Grid';
+import NewArrivalCard from '../../components/NewArrivalCard';
 function Home() {
   return (
     <div>
@@ -21,6 +22,7 @@ function Home() {
         </Box>
       </Box>
       <Box>
+        {/* Card List  */}
         <Box sx={{ display: "flex", flexDirection: "column", px: "30px" }}>
           <Grid container spacing={2}>
             <Grid xs={4} md={4}>
@@ -46,6 +48,8 @@ function Home() {
             </Grid>
           </Grid>
         </Box>
+        {/* Arrival Card */}
+        <NewArrivalCard/>
       </Box>
     </div>
   );
