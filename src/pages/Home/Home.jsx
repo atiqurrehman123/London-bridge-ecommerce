@@ -1,12 +1,13 @@
 import React from 'react'
 import ImageSlider from '../../components/ImageSlider'
-import { Box } from '@mui/material';
+import { Box ,Container} from '@mui/material';
 import Card from '../../components/Card';
 import Grid from '@mui/material/Grid';
 import NewArrivalCard from '../../components/NewArrivalCard';
 function Home() {
   return (
-    <div>
+    <Box >
+
       {/* Slider for Image Showing */}
       <ImageSlider />
       <Box>
@@ -25,25 +26,25 @@ function Home() {
         {/* Card List  */}
         <Box sx={{ display: "flex", flexDirection: "column", px: "30px" }}>
           <Grid container spacing={2}>
-            <Grid xs={4} md={4}>
+            <Grid xs={12} md={4} sm={12}>
               <Card />
             </Grid>
-            <Grid xs={4} md={4}>
+            <Grid xs={12} md={4} sm={12}>
               <Card />
             </Grid>
-            <Grid xs={4} md={4}>
+            <Grid xs={12} md={4} sm={12}>
               <Card />
             </Grid>
-            <Grid xs={4} md={4}>
+            <Grid xs={12} md={4} sm={12} >
               <Card />
             </Grid>
-            <Grid xs={4} md={4}>
+            <Grid xs={12} md={4} sm={12} >
               <Card />
             </Grid>{" "}
-            <Grid xs={4} md={4}>
+            <Grid xs={12} md={4} sm={12} >
               <Card />
             </Grid>
-            <Grid xs={4} md={4}>
+            <Grid xs={12} md={4} sm={12} >
               <Card />
             </Grid>
           </Grid>
@@ -51,7 +52,8 @@ function Home() {
         {/* Arrival Card */}
         <NewArrivalCard/>
       </Box>
-    </div>
+</Box >
+
   );
 }
 

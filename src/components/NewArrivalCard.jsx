@@ -16,15 +16,16 @@ export default function NewArrivalCard() {
         px={"12px"}
         py={"40px"}
       >
-        <Grid item xs={6} md={6}>
+        <Grid item xs={12} md={6}>
           <Box>
             <img
+            width={"100%"}
               alt="arrivalImage"
               src="https://cdn.shopify.com/s/files/1/0144/7827/8739/files/AY5A7277_600x.jpg?v=1665079572"
             />
           </Box>
         </Grid>
-        <Grid item xs={6} md={6} alignItems={"center"} display={"flex"} >
+        <Grid item xs={12} md={6} alignItems={"center"} display={"flex"} >
           <Box display={"flex"} flexDirection={"column"} px={"52px"}> 
             <Box
               sx={{ fontSize: "32px", fontWeight: "bold", color: "#412885" }}

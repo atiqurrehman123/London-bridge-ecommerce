@@ -29,7 +29,7 @@ const Card = () => {
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "fill",
+            objectFit: "cover",
             filter: isHovered && "brightness(0.5)",
           }}
         />

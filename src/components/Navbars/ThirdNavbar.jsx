@@ -3,10 +3,12 @@ import Box from "@mui/material/Box";
 import { RiFacebookFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import SearchInput from "../SearchInput";
+import { useMediaQuery } from "@mui/material";
 const styleUderline={
     textDecoration:"none"
 }
 const ThirdNavbar = () => {
+
   return (
     <div>
       <Box

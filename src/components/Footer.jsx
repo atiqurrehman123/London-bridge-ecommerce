@@ -21,10 +21,10 @@ const Footer = () => {
           <Grid
             container
             spacing={{ xs: 2, md: 3 }}
-            columns={{ xs: 4, sm: 8, md: 12 }}
+            columns={{ xs: 12, sm: 8, md: 12 }}
           >
             {/* {Array.from(Array(6)).map((_, index) => ( */}
-            <Grid item xs={2} sm={3} md={3}>
+            <Grid item xs={12} sm={3} md={3}>
               <Box>
                 <Box>
                   <img
@@ -57,7 +57,7 @@ const Footer = () => {
               </Box>
 
             </Grid>
-            <Grid item xs={2} sm={3} md={3}>
+            <Grid item xs={12} sm={3} md={3}>
               <Box>
                 <Box sx={{ fontWeight: "bold", marginBottom: "18px" }}>
                   Useful Links
@@ -74,7 +74,7 @@ const Footer = () => {
                 })}
               </Box>
             </Grid>{" "}
-            <Grid item xs={2} sm={3} md={3}>
+            <Grid item xs={12} sm={3} md={3}>
               <Box>
                 <Box sx={{ fontWeight: "bold", marginBottom: "18px" }}>
                   Contact Us
