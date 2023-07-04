@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import { RiFacebookFill } from "react-icons/ri";
-import {FaInstagram} from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
 import { AiOutlineShopping } from "react-icons/ai";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
+import { VscThreeBars } from "react-icons/vsc";
+import { RxCross2 } from "react-icons/rx";
 
 const SecondNavbar = () => {
-        const matches = useMediaQuery("(min-width:600px)");
-
+  const [IsActiveDropdown, setIsActivedropdown] = useState(false);
+  const matches = useMediaQuery("(min-width:600px)");
   return (
     <div>
       <Box
@@ -73,15 +75,16 @@ const SecondNavbar = () => {
             >
               {/* Social Media icons */}
               <Box>
-                bars
+                {IsActiveDropdown ? (
+                  <RxCross2 size={26} onClick={()=>setIsActivedropdown(false)} />
+                ) : (
+                  <VscThreeBars size={26} onClick={()=>setIsActivedropdown(true)} />
+                )}
               </Box>
-              
-              <Box
-                typography={"h6"}
-                sx={{fontSize:"16px",padding:"0"}}
-               
-              >
-                MENU              </Box>
+
+              <Box typography={"h6"} sx={{ fontSize: "16px", padding: "0" }}>
+                MENU{" "}
+              </Box>
             </Box>
           )}
         </Box>
@@ -165,6 +168,120 @@ const SecondNavbar = () => {
           </Box>
         </Box>
       </Box>
+      {!matches && IsActiveDropdown && (
+        <Box
+          sx={{
+            position: "relative",
+            // background: "rgba(232, 232, 232, 0.9)",
+            zIndex: "2",
+          }}
+        >
+          <Box
+            sx={{
+              position: "absolute",
+              background: "rgba(232, 232, 232, 0.9)",
+              width: "100%",
+            }}
+          >
+            <Box
+              typography={"h6"}
+              sx={{
+                fontSize: "16px",
+                fontFamily: "system-ui",
+                color: "#383838",
+                py: "8px",
+                px: "18px",
+              }}
+            >
+              HOME
+            </Box>
+            <Box
+              typography={"h6"}
+              sx={{
+                fontSize: "16px",
+                fontFamily: "system-ui",
+                color: "#383838",
+                py: "8px",
+                px: "18px",
+              }}
+            >
+              WhatS NEW
+            </Box>
+            <Box
+              typography={"h6"}
+              sx={{
+                fontSize: "16px",
+                fontFamily: "system-ui",
+                color: "#383838",
+                py: "8px",
+                px: "18px",
+              }}
+            >
+              SUMMER TWINSETS
+            </Box>
+            <Box
+              typography={"h6"}
+              sx={{
+                fontSize: "16px",
+                fontFamily: "system-ui",
+                color: "#383838",
+                py: "8px",
+                px: "18px",
+              }}
+            >
+              TROUSER
+            </Box>
+            <Box
+              typography={"h6"}
+              sx={{
+                fontSize: "16px",
+                fontFamily: "system-ui",
+                color: "#383838",
+                py: "8px",
+                px: "18px",
+              }}
+            >
+              CAPS
+            </Box>
+            <Box
+              typography={"h6"}
+              sx={{
+                fontSize: "16px",
+                fontFamily: "system-ui",
+                color: "#383838",
+                py: "8px",
+                px: "18px",
+              }}
+            >
+              ACCESSORIES
+            </Box>
+            <Box
+              typography={"h6"}
+              sx={{
+                fontSize: "16px",
+                fontFamily: "system-ui",
+                color: "#383838",
+                py: "8px",
+                px: "18px",
+              }}
+            >
+              WHATSAPP 923238528992
+            </Box>
+            <Box
+              typography={"h6"}
+              sx={{
+                fontSize: "16px",
+                fontFamily: "system-ui",
+                color: "#383838",
+                py: "8px",
+                px: "18px",
+              }}
+            >
+              LOGIN
+            </Box>
+          </Box>
+        </Box>
+      )}
     </div>
   );
 };
