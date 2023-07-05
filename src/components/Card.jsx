@@ -15,7 +15,7 @@ const Card = () => {
   return (
     <Box sx={{ px: "18px", py: "10px" }}>
       <Box
-        height={400}
+        // height={400}
         position="relative"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -28,7 +28,6 @@ const Card = () => {
           alt="Product"
           style={{
             width: "100%",
-            height: "100%",
             objectFit: "cover",
             filter: isHovered && "brightness(0.5)",
           }}
@@ -122,9 +121,12 @@ const Card = () => {
         </Box>
         <Box>
           <Box sx={{ display: "flex", justifyContent: "center", gap: "8px" }}>
-            <Box>from</Box>
-            <Box sx={{ color: "red" }}>Rs 1,990.00</Box>
-            <Box sx={{ textDecoration: "line-through" }}>Rs 6000.00</Box>
+            <Box>
+              <Box sx={{ color: "red" }}>
+                <Box component={"span"} sx={{color:"black",fontSize:"16px",fontStyle:"italic"}}>from</Box> Rs 1,990.00
+              </Box>
+              <Box sx={{ textDecoration: "line-through" ,alignItems:"center",display:"flex",justifyContent:"center"}}>Rs 6000.00</Box>
+            </Box>
           </Box>
         </Box>
       </Box>

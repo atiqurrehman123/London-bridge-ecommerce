@@ -76,9 +76,15 @@ const SecondNavbar = () => {
               {/* Social Media icons */}
               <Box>
                 {IsActiveDropdown ? (
-                  <RxCross2 size={26} onClick={()=>setIsActivedropdown(false)} />
+                  <RxCross2
+                    size={26}
+                    onClick={() => setIsActivedropdown(false)}
+                  />
                 ) : (
-                  <VscThreeBars size={26} onClick={()=>setIsActivedropdown(true)} />
+                  <VscThreeBars
+                    size={26}
+                    onClick={() => setIsActivedropdown(true)}
+                  />
                 )}
               </Box>
 
@@ -143,8 +149,22 @@ const SecondNavbar = () => {
                 <Box>
                   <FaRegUser size="22" />
                 </Box>
-                <Box typography={"h6"}>
-                  <Link to="/login">LOGIN</Link>
+                <Box typography={"h6"} sx={{ color: "white" }}>
+                  <Link
+                    to="/login"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    <Box
+                      component={"span"}
+                      sx={{
+                        color: "white",
+                        textDecoration: "none",
+                        ":hover": { color: "#03a196" },
+                      }}
+                    >
+                      LOGIN{" "}
+                    </Box>
+                  </Link>
                 </Box>
               </Box>
             )}
@@ -272,7 +292,7 @@ const SecondNavbar = () => {
               sx={{
                 fontSize: "16px",
                 fontFamily: "system-ui",
-                color: "#383838",
+                color: "white",
                 py: "8px",
                 px: "18px",
               }}

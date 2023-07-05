@@ -26,25 +26,25 @@ function Home() {
         {/* Card List  */}
         <Box sx={{ display: "flex", flexDirection: "column", px: "30px" }}>
           <Grid container spacing={2}>
-            <Grid xs={12} md={4} sm={12}>
+            <Grid xs={6} md={4} sm={6}>
               <Card />
             </Grid>
-            <Grid xs={12} md={4} sm={12}>
+            <Grid xs={6} md={4} sm={6}>
               <Card />
             </Grid>
-            <Grid xs={12} md={4} sm={12}>
+            <Grid xs={6} md={4} sm={6}>
               <Card />
             </Grid>
-            <Grid xs={12} md={4} sm={12} >
+            <Grid xs={6} md={4} sm={6} >
               <Card />
             </Grid>
-            <Grid xs={12} md={4} sm={12} >
+            <Grid xs={6} md={4} sm={6} >
               <Card />
             </Grid>{" "}
-            <Grid xs={12} md={4} sm={12} >
+            <Grid xs={6} md={4} sm={6} >
               <Card />
             </Grid>
-            <Grid xs={12} md={4} sm={12} >
+            <Grid xs={6} md={4} sm={6} >
               <Card />
             </Grid>
           </Grid>
