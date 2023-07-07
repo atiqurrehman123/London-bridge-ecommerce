@@ -136,7 +136,7 @@ const ThirdNavbar = () => {
             </Link>
           </Box>
           <Box sx={{ color: "#383838", marginBottom: "10px", width: "250px" }}>
-            {/* <SearchInput /> */}
+            <SearchInput />
           </Box>
         </Box>
       </Box>

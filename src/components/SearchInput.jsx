@@ -1,6 +1,6 @@
 import React from "react";
 import {AiOutlineSearch} from "react-icons/ai"
-import { Box } from "@mui/material";
+import { Box, InputAdornment, TextField } from "@mui/material";
 
 const SearchInput = () => {
 
@@ -11,8 +11,24 @@ const SearchInput = () => {
 
   return (
     <Box>
-      <input type="text" onChange={handleSearch} />
-      <AiOutlineSearch />
+      <TextField
+        type="text"
+        onChange={handleSearch}
+        id="input-with-icon-textfield"
+        // label="TextField"
+        sx={{maxWidth:"80%",maxHeight:"10%", "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
+      borderColor: "black", // Sets the focus border color to transparent
+        }}}
+        InputProps={{
+          style:{borderRadius:"1px",maxHeight:"30px"},
+          endAdornment: (
+          <InputAdornment position="end">
+            <AiOutlineSearch />
+          </InputAdornment>
+          )
+        }
+        }
+      />
     </Box>
   );
 };

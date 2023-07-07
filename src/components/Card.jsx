@@ -1,8 +1,9 @@
 import React from "react";
-import { Box, Typography, backdropClasses } from "@mui/material";
+import { Box, Typography, backdropClasses ,useMediaQuery} from "@mui/material";
 
 const Card = () => {
   const [isHovered, setIsHovered] = React.useState(false);
+      const matches = useMediaQuery("(min-width:600px)");
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -24,17 +25,18 @@ const Card = () => {
         }}
       >
         <img
-          src="https://cdn.shopify.com/s/files/1/0144/7827/8739/files/MAJ5437_2000x.jpg?v=1683110402"
+          src={isHovered?"https://londonbridge.com.pk/cdn/shop/products/AY5A1931_2000x.jpg?v=1681554345":"https://cdn.shopify.com/s/files/1/0144/7827/8739/files/MAJ5437_2000x.jpg?v=1683110402"}
           alt="Product"
           style={{
             width: "100%",
             objectFit: "cover",
             filter: isHovered && "brightness(0.5)",
+            transitionDelay:"0.5s"
           }}
         />
 
         {/* {isHovered && ( */}
-        <Box
+       {matches && <Box
           position="absolute"
           top="50%"
           left="30%"
@@ -49,6 +51,8 @@ const Card = () => {
           transition="opacity 0.3s"
           opacity="0.8"
           sx={{
+            display:"flex",
+            flexWrap:"nowrap",
             "&:hover": {
               opacity: 1,
               backgroundColor: "white",
@@ -60,17 +64,17 @@ const Card = () => {
               variant="h6"
               color="white"
               sx={{
-                cursor: "pointer",
-                "&:hover": {
-                  opacity: 1,
-                  color: "black",
-                },
+                cursor: "pointer", 
+                ":hover":{
+                opacity:isHovered && 1,
+                  color:isHovered && "black",
+                }
               }}
             >
               Quick View
             </Typography>
           )}
-        </Box>
+        </Box>}
         {/* )} */}
 
         <Box position="absolute" right={0} top={0} color="white" zIndex={1}>

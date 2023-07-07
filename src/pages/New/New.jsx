@@ -1,8 +1,11 @@
 import React from 'react'
+import SearchSection from '../../components/Searchsection'
 
 const New = () => {
   return (
-    <div>New</div>
+    <div>
+      <SearchSection text={"New"}/>
+    </div>
   )
 }
 
