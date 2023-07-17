@@ -10,6 +10,7 @@ import Caps from './pages/Caps/Caps';
 import New from './pages/New/New'
 import Summer from './pages/Summer/Summer'
 import Footer from './components/Footer';
+import Trouser from './pages/trouser/Trouser';
 // Import Swiper styles
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/' element={<Home />} />
         <Route exact path='/New' element={<New />} />
         <Route exact path='/summer' element={<Summer />} />
+        <Route exact path='/trouser' element={<Trouser/>} />
         <Route exact path='/caps' element={<Caps />} />
         <Route exact path='/accessories' element={<Accessories />} />
         <Route exact path='/account/login' element={<Login />} />

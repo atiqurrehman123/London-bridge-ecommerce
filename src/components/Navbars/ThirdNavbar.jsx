@@ -102,6 +102,24 @@ const ThirdNavbar = () => {
             </Link>
           </Box>
           <Box>
+            <Link style={styleUderline} to="/trouser">
+              <Box
+                sx={{
+                  textDecoration: "none",
+                  color: "#383838",
+                  paddingBottom: "8px",
+                  ":hover": {
+                    borderBottom: "1px solid #9a9696",
+                    color: "#9a9696",
+                    textTransform:"uppercase",
+                  },
+                }}
+              >
+                TROUSERS
+              </Box>
+            </Link>
+          </Box>
+          <Box>
             <Link style={styleUderline} to="/caps">
               <Box
                 sx={{

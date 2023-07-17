@@ -203,54 +203,83 @@ const SecondNavbar = () => {
               width: "100%",
             }}
           >
-            <Box
-              typography={"h6"}
-              sx={{
-                fontSize: "16px",
-                fontFamily: "system-ui",
-                color: "#383838",
-                py: "8px",
-                px: "18px",
-              }}
+            <Link
+              to="/"
+              onClick={() => setIsActivedropdown(false)}
+              style={{ textDecoration: "none", color: "white" }}
             >
-              HOME
-            </Box>
-            <Box
-              typography={"h6"}
-              sx={{
-                fontSize: "16px",
-                fontFamily: "system-ui",
-                color: "#383838",
-                py: "8px",
-                px: "18px",
-              }}
+              <Box
+                typography={"h6"}
+                sx={{
+                  fontSize: "16px",
+                  fontFamily: "system-ui",
+                  color: "#383838",
+                  py: "8px",
+                  px: "18px",
+                }}
+              >
+                HOME
+              </Box>
+            </Link>
+            <Link
+              to="/New"
+              onClick={() => setIsActivedropdown(false)}
+              style={{ textDecoration: "none", color: "white" }}
             >
-              WhatS NEW
-            </Box>
-            <Box
-              typography={"h6"}
-              sx={{
-                fontSize: "16px",
-                fontFamily: "system-ui",
-                color: "#383838",
-                py: "8px",
-                px: "18px",
-              }}
+              <Box
+                typography={"h6"}
+                sx={{
+                  fontSize: "16px",
+                  fontFamily: "system-ui",
+                  color: "#383838",
+                  py: "8px",
+                  px: "18px",
+                }}
+              >
+                WhatS NEW
+              </Box>
+            </Link>
+            <Link
+              to="/summer"
+              onClick={() => setIsActivedropdown(false)}
+              style={{ textDecoration: "none", color: "white" }}
             >
-              SUMMER TWINSETS
-            </Box>
-            <Box
-              typography={"h6"}
-              sx={{
-                fontSize: "16px",
-                fontFamily: "system-ui",
-                color: "#383838",
-                py: "8px",
-                px: "18px",
-              }}
+              <Box
+                typography={"h6"}
+                sx={{
+                  fontSize: "16px",
+                  fontFamily: "system-ui",
+                  color: "#383838",
+                  py: "8px",
+                  px: "18px",
+                }}
+              >
+                SUMMER TWINSETS
+              </Box>
+            </Link>
+            <Link
+              to="/trouser"
+              onClick={() => setIsActivedropdown(false)}
+              style={{ textDecoration: "none", color: "white" }}
             >
-              TROUSER
-            </Box>
+              <Box
+                typography={"h6"}
+                sx={{
+                  fontSize: "16px",
+                  fontFamily: "system-ui",
+                  color: "#383838",
+                  py: "8px",
+                  px: "18px",
+                }}
+              >
+                TROUSER
+              </Box>
+            </Link>
+            <Link
+              to="/caps"
+              onClick={() => setIsActivedropdown(false)}
+              style={{ textDecoration: "none", color: "white" }}
+            ></Link>
             <Box
               typography={"h6"}
               sx={{
@@ -263,42 +292,58 @@ const SecondNavbar = () => {
             >
               CAPS
             </Box>
-            <Box
-              typography={"h6"}
-              sx={{
-                fontSize: "16px",
-                fontFamily: "system-ui",
-                color: "#383838",
-                py: "8px",
-                px: "18px",
-              }}
+            <Link
+              to="/accessories"
+              onClick={() => setIsActivedropdown(false)}
+              style={{ textDecoration: "none", color: "white" }}
             >
-              ACCESSORIES
-            </Box>
-            <Box
-              typography={"h6"}
-              sx={{
-                fontSize: "16px",
-                fontFamily: "system-ui",
-                color: "#383838",
-                py: "8px",
-                px: "18px",
-              }}
+              <Box
+                typography={"h6"}
+                sx={{
+                  fontSize: "16px",
+                  fontFamily: "system-ui",
+                  color: "#383838",
+                  py: "8px",
+                  px: "18px",
+                }}
+              >
+                ACCESSORIES
+              </Box>
+            </Link>
+            <Link
+              to="/login"
+              style={{ textDecoration: "none", color: "white" }}
             >
-              WHATSAPP 923238528992
-            </Box>
-            <Box
-              typography={"h6"}
-              sx={{
-                fontSize: "16px",
-                fontFamily: "system-ui",
-                color: "white",
-                py: "8px",
-                px: "18px",
-              }}
+              <Box
+                typography={"h6"}
+                sx={{
+                  fontSize: "16px",
+                  fontFamily: "system-ui",
+                  color: "#383838",
+                  py: "8px",
+                  px: "18px",
+                }}
+              >
+                WHATSAPP 923238528992
+              </Box>
+            </Link>
+            <Link
+              to="/login"
+              style={{ textDecoration: "none", color: "white" }}
             >
-              LOGIN
-            </Box>
+              <Box
+                typography={"h6"}
+                sx={{
+                  fontSize: "16px",
+                  fontFamily: "system-ui",
+                  // color: "white",
+                  py: "8px",
+                  px: "18px",
+                }}
+              >
+                LOGIN
+              </Box>
+            </Link>
           </Box>
         </Box>
       )}
