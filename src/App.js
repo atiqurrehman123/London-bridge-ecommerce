@@ -18,8 +18,8 @@ function App() {
       <Header/>
       <Routes>
         <Route exact path='/' element={<Home />} />
-        <Route exact path='/whatsNew' element={<New />} />
-        <Route exact path='/summerTwinsets' element={<Summer />} />
+        <Route exact path='/New' element={<New />} />
+        <Route exact path='/summer' element={<Summer />} />
         <Route exact path='/caps' element={<Caps />} />
         <Route exact path='/accessories' element={<Accessories />} />
         <Route exact path='/account/login' element={<Login />} />

@@ -68,7 +68,7 @@ const ThirdNavbar = () => {
             </Link>
           </Box>
           <Box>
-            <Link style={styleUderline} to="/whatsNew">
+            <Link style={styleUderline} to="/New">
               <Box
                 sx={{
                   textDecoration: "none",
@@ -85,7 +85,7 @@ const ThirdNavbar = () => {
             </Link>
           </Box>
           <Box>
-            <Link style={styleUderline} to="/summerTwinsets">
+            <Link style={styleUderline} to="/summer">
               <Box
                 sx={{
                   textDecoration: "none",

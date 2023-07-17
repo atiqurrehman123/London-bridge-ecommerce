@@ -25,56 +25,62 @@ const Card = () => {
         }}
       >
         <img
-          src={isHovered?"https://londonbridge.com.pk/cdn/shop/products/AY5A1931_2000x.jpg?v=1681554345":"https://cdn.shopify.com/s/files/1/0144/7827/8739/files/MAJ5437_2000x.jpg?v=1683110402"}
+          src={
+            isHovered
+              ? "https://londonbridge.com.pk/cdn/shop/products/AY5A1931_2000x.jpg?v=1681554345"
+              : "https://cdn.shopify.com/s/files/1/0144/7827/8739/files/MAJ5437_2000x.jpg?v=1683110402"
+          }
           alt="Product"
           style={{
             width: "100%",
             objectFit: "cover",
             filter: isHovered && "brightness(0.5)",
-            transitionDelay:"0.5s"
+            transitionDelay: "0.5s",
           }}
         />
 
         {/* {isHovered && ( */}
-       {matches && <Box
-          position="absolute"
-          top="50%"
-          left="30%"
-          transform="translate(-50%, -50%)"
-          bgcolor={isHovered && "rgba(0, 0, 0, 0.5)"}
-          border={isHovered && "1px solid #ffffff"}
-          padding="8px 16px"
-          // border="none"
-          cursor="pointer"
-          fontweight="bold"
-          zIndex={1}
-          transition="opacity 0.3s"
-          opacity="0.8"
-          sx={{
-            display:"flex",
-            flexWrap:"nowrap",
-            "&:hover": {
-              opacity: 1,
-              backgroundColor: "white",
-            },
-          }}
-        >
-          {isHovered && (
-            <Typography
-              variant="h6"
-              color="white"
-              sx={{
-                cursor: "pointer", 
-                ":hover":{
-                opacity:isHovered && 1,
-                  color:isHovered && "black",
-                }
-              }}
-            >
-              Quick View
-            </Typography>
-          )}
-        </Box>}
+        {matches && (
+          <Box
+            position="absolute"
+            top="50%"
+            left="30%"
+            transform="translate(-50%, -50%)"
+            bgcolor={isHovered && "rgba(0, 0, 0, 0.5)"}
+            border={isHovered && "1px solid #ffffff"}
+            padding="8px 16px"
+            // border="none"
+            cursor="pointer"
+            fontweight="bold"
+            zIndex={1}
+            transition="opacity 0.3s"
+            opacity="0.8"
+            sx={{
+              display: "flex",
+              flexWrap: "nowrap",
+              "&:hover": {
+                opacity: 1,
+                backgroundColor: "white",
+              },
+            }}
+          >
+            {isHovered && (
+              <Typography
+                variant="h6"
+                color="white"
+                sx={{
+                  cursor: "pointer",
+                  ":hover": {
+                    opacity: isHovered && 1,
+                    color: isHovered && "black",
+                  },
+                }}
+              >
+                Quick View
+              </Typography>
+            )}
+          </Box>
+        )}
         {/* )} */}
 
         <Box position="absolute" right={0} top={0} color="white" zIndex={1}>
@@ -82,19 +88,29 @@ const Card = () => {
             sx={{ px: "10px", py: "5px", bgcolor: "#38424E" }}
             variant="body2"
           >
-            66% off
+            <Typography
+              component={"span"}
+              sx={{ fontSize: !matches && "12px" }}
+            >
+              66% off
+            </Typography>
           </Typography>
           <Typography
             variant="body2"
             sx={{
               px: "10px",
-              py: "5px",
+              py:!matches&& "0px",
               bgcolor: "#03A196",
               fontweight: "700",
               fontFamily: "Lato, sans-serif",
             }}
           >
+            <Typography
+              component={"span"}
+              sx={{ fontSize: !matches && "12px" }}
+            >
             New
+            </Typography>
           </Typography>
         </Box>
 
@@ -127,9 +143,24 @@ const Card = () => {
           <Box sx={{ display: "flex", justifyContent: "center", gap: "8px" }}>
             <Box>
               <Box sx={{ color: "red" }}>
-                <Box component={"span"} sx={{color:"black",fontSize:"16px",fontStyle:"italic"}}>from</Box> Rs 1,990.00
+                <Box
+                  component={"span"}
+                  sx={{ color: "black", fontSize: "16px", fontStyle: "italic" }}
+                >
+                  from
+                </Box>{" "}
+                Rs 1,990.00
               </Box>
-              <Box sx={{ textDecoration: "line-through" ,alignItems:"center",display:"flex",justifyContent:"center"}}>Rs 6000.00</Box>
+              <Box
+                sx={{
+                  textDecoration: "line-through",
+                  alignItems: "center",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                Rs 6000.00
+              </Box>
             </Box>
           </Box>
         </Box>
