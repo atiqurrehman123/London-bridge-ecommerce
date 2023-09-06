@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ImageSlider from '../../components/ImageSlider'
 import { Box ,Container} from '@mui/material';
 import Card from '../../components/Card';
 import Grid from '@mui/material/Grid';
 import NewArrivalCard from '../../components/NewArrivalCard';
+import { SendData } from '../../utils/apiCalls';
 function Home() {
+  const [datalist,setDataList]=useState([])
+  useEffect(()=>{
+    
+  })
   return (
     <Box >
 
